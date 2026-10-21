@@ -1,0 +1,138 @@
+@font-face{
+  font-family: 'Poppins';
+  src: url('fonts/poppins/Poppins-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face{
+  font-family: 'Poppins';
+  src: url('fonts/poppins/Poppins-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face{
+  font-family: 'Poppins';
+  src: url('fonts/poppins/Poppins-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face{
+  font-family: 'Poppins';
+  src: url('fonts/poppins/Poppins-Thin.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face{
+  font-family: 'Allura';
+  src: url('fonts/allura/Allura-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+  background: linear-gradient(white, lightgrey);
+}
+
+body {
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+  padding: 0%;
+  margin: 0%;
+}
+
+.page-header{
+  position: sticky;
+  top: 0;
+  width: 100%;
+  /* z-index: 1000; */
+}
+
+.navbar {
+  display: flex;
+  /* flex-direction: row; */
+  justify-content: space-between;
+  align-items: center;
+
+  /* padding-top: 30px; */
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.logo-text {
+  font-family: 'allura';
+  font-size: 35px;
+
+  margin:  5px;
+  margin-left: 20px;
+}
+
+.navbar-items {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 20px;
+
+  padding-top: 20px;
+  padding-left: 1%;
+  padding-right: 1%;
+}
+
+.navbar-item {
+  padding-bottom: 10px;
+}
+
+.break-line {
+  padding-top: 3px;
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+.hero-container{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  height: 600px;
+  background: linear-gradient(to left, white, rgb(71, 71, 71) 80%);
+  color: white;
+}
+
+.hero-container-left{
+  grid-column: span 3;
+  display: flex;
+
+  align-items: center;
+}
+
+.hero-container-right {
+  grid-column: span 2;
+
+  background-image: url('./images/stephen.png');
+  width: 100%;
+  background-size: 1080px;
+  background-position: 40%;
+  background-repeat: no-repeat;
+}
+
+.hero-container-left-message {
+  padding-left: 100px;
+}
+
+.headline {
+  font-weight: bold;
+}
+
+.subheadline {
+  padding-top: 40px;
+  font-weight: 100;
+}
+
+.page-body {
+  display: flex;
+}
+
+.about-me {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
