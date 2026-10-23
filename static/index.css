@@ -554,6 +554,8 @@ p {
 
     padding: 80px 20px 20px;
 
+    overflow-y: auto;
+
     transition: left 0.3s ease;
     z-index: 1001;
   }
