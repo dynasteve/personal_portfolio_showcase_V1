@@ -772,11 +772,6 @@ p {
 
 
   /* Hero section */
-
-  .hero-container-left {
-    padding: 45px 20px;
-  }
-
   h1 {
     font-size: 32px;
   }
@@ -788,6 +783,11 @@ p {
   h3 {
     font-size: 21px;
   }
+
+  .hero-container-left {
+    padding: 45px 20px;
+  }
+
 
   .hero-container-right {
     height: 280px;

@@ -1,0 +1,16 @@
+.education-content-container {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.education-content-container + .education-content-container {
+  padding-top: 20px;
+  border-top: 1px solid #ccc;
+}
+
+@media (max-width: 800px) {
+  .education-content-container {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}

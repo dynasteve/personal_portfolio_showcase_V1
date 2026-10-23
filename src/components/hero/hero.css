@@ -1,0 +1,93 @@
+.hero-container {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  height: 600px;
+
+  background: linear-gradient(
+    to left,
+    white,
+    rgb(71, 71, 71) 80%
+  );
+
+  color: white;
+
+  max-width: 1920px;
+  margin: auto;
+}
+
+.hero-container-left {
+  grid-column: span 4;
+  display: flex;
+  align-items: center;
+}
+
+.hero-container-right {
+  grid-column: span 2;
+
+  background-image:
+    linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0),
+      rgba(0, 0, 0, 0.5) 100%
+    ),
+    url('../../assets/images/stephen.png');
+
+  width: 100%;
+  background-size: 1080px;
+  background-position: 40%;
+  background-repeat: no-repeat;
+}
+
+.hero-container-left-message {
+  padding-left: 100px;
+  max-width: 650px;
+}
+
+.headline {
+  font-weight: bold;
+}
+
+.subheadline {
+  padding-top: 40px;
+  font-weight: 100;
+}
+
+@media (max-width: 800px) {
+  .hero-container {
+    padding-top: 50px;
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+
+  .hero-container-left {
+    grid-column: 1;
+    padding: 60px 25px;
+    /* max-width: 90%; */
+  }
+
+  .hero-container-left-message {
+    padding-left: 2px;
+    max-width: 100%;
+  }
+
+  .hero-container-right {
+    display: none;
+    grid-column: 1;
+    height: 350px;
+
+    background-size: cover;
+    background-position: center;
+  }
+
+  .subheadline {
+    padding-top: 25px;
+    max-width: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-container-left {
+    padding: 45px 20px;
+    max-width: 100%;
+  }
+}
