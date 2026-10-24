@@ -133,6 +133,19 @@
   text-align: right;
 }
 
+.back-to-top-button-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+
+  z-index: 1002;
+  transition: color 0.5 ease;
+}
+
+.back-to-top-button-container-hidden {
+  display: none;
+}
+
 
 @media (max-width: 800px) {
 

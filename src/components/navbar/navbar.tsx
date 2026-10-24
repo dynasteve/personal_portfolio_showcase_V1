@@ -2,6 +2,7 @@ import './navbar.css'
 
 interface Props{
   showSideBar: boolean;
+  activeSection: string;
   scrollToHero : React.MouseEventHandler<HTMLButtonElement>;
   scrollToAbout : React.MouseEventHandler<HTMLButtonElement>;
   scrollToSkills : React.MouseEventHandler<HTMLButtonElement>;
@@ -10,7 +11,16 @@ interface Props{
   scrollToContact : React.MouseEventHandler<HTMLButtonElement>;
 }
 
-export default function Navbar ({showSideBar, scrollToHero, scrollToAbout, scrollToSkills, scrollToProjects, scrollToEducation, scrollToContact}: Props) {
+export default function Navbar ({showSideBar, activeSection, scrollToHero, scrollToAbout, scrollToSkills, scrollToProjects, scrollToEducation, scrollToContact}: Props) {
+  const navItems: [string, string, React.MouseEventHandler<HTMLButtonElement>][] = 
+  [
+    ['Home', 'hero' , scrollToHero], 
+    ['About', 'about' , scrollToAbout], 
+    ['Skills', 'skills' , scrollToSkills], 
+    ['Project', 'projects' , scrollToProjects], 
+    ['Education', 'education' , scrollToEducation], 
+    ['Contact', 'contact-footer' , scrollToContact]
+  ];
   return (
     <>
       <div className="navbar">
@@ -18,7 +28,16 @@ export default function Navbar ({showSideBar, scrollToHero, scrollToAbout, scrol
           Stephen Akande
         </div>
         <div className={(showSideBar===true) ? "navbar-items open" : 'navbar-items'} id="navbar-items">
-          <div className="navbar-item">
+            {navItems.map((navitem) => {
+              return(
+                  <div className={`navbar-item ${activeSection === navitem[1] ? 'active' : ''}`} key={navitem[1]}>
+                    <button className='navbar-button' onClick={navitem[2]}>
+                      {navitem[0]}
+                    </button>
+                  </div>
+              )
+            })}
+          {/* <div className="navbar-item">
             <button className='navbar-button' onClick={scrollToHero}>
               Home
             </button>
@@ -47,7 +66,7 @@ export default function Navbar ({showSideBar, scrollToHero, scrollToAbout, scrol
             <button className='navbar-button' onClick={scrollToContact}>
               Contact
             </button>
-          </div>
+          </div> */}
         </div>
       </div>
       <div className="break-line"></div>

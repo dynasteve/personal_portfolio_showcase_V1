@@ -7,10 +7,15 @@ import Education from './components/page-section-education/education'
 import Projects from './components/page-section-projects/projects'
 import Skills from './components/page-section-skills/skills'
 import DarkToggleButton from './components/buttons/darkToggleButton'
+import useActiveSection from './hooks/useActiveSection'
+import BackToTopButton from './components/buttons/backToTopButton'
 
 
 function App() {
   const [showSideBar, setShowSideBar] = useState(false);
+  const sectionIds = ['hero', 'about', 'education', 'skills', 'projects'];
+
+  const activeSection = useActiveSection(sectionIds);
 
   const funcShowSideBar = () => {
     const isSidebarOpen = !showSideBar;
@@ -73,6 +78,7 @@ function App() {
       <div className="page-header mobile-header">
         <Navbar 
           showSideBar={showSideBar} 
+          activeSection = {activeSection}
           scrollToHero = {scrollToHero}
           scrollToAbout = {scrollToAbout}
           scrollToSkills = {scrollToSkills}
@@ -83,12 +89,16 @@ function App() {
       </div>
     
       <button className="menu-toggle" id="menu-toggle" 
-        onClick={funcShowSideBar}
-        aria-label={showSideBar ? "Close navigation menu" : "Open navigation menu"}
-        aria-expanded={showSideBar}
-        aria-controls="navbar-items">
-      {showSideBar ? "✕" : "☰"}
+          onClick={funcShowSideBar}
+          aria-label={showSideBar ? "Close navigation menu" : "Open navigation menu"}
+          aria-expanded={showSideBar}
+          aria-controls="navbar-items">
+        {showSideBar ? "✕" : "☰"}
       </button>
+
+      <div className={(activeSection !== 'hero') ? 'back-to-top-button-container' : 'back-to-top-button-container-hidden'}>
+        <BackToTopButton scrollToHero = {scrollToHero} />
+      </div>
 
       <DarkToggleButton isDark={isDark} toggleTheme={toggleTheme} />
 
