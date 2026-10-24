@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './App.css'
 import Hero from './components/hero/hero'
 import Navbar from './components/navbar/navbar'
@@ -6,6 +6,7 @@ import About from './components/page-section-about/about'
 import Education from './components/page-section-education/education'
 import Projects from './components/page-section-projects/projects'
 import Skills from './components/page-section-skills/skills'
+import DarkToggleButton from './components/buttons/darkToggleButton'
 
 
 function App() {
@@ -13,6 +14,18 @@ function App() {
   const funcShowSideBar = () => {
     const isSidebarOpen = !showSideBar;
     setShowSideBar(isSidebarOpen);
+  };
+  const [theme, setTheme] = useState(() => {
+    return localStorage.getItem('theme') || 'light';
+  });
+
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
+  }, [theme]);
+
+  const toggleTheme = () => {
+    setTheme((prevTheme) => (prevTheme === 'light' ? 'dark' : 'light'));
   };
 
   return (
@@ -29,10 +42,7 @@ function App() {
     {showSideBar ? "✕" : "☰"}
     </button>
 
-    <button className="dark-mode-toggle" id="menu-toggle" 
-      onClick={null}>
-    {showSideBar ? "✕" : "☰"}
-    </button>
+    <DarkToggleButton toggleTheme={toggleTheme} />
 
     <Hero />
 
