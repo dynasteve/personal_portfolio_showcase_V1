@@ -5,41 +5,35 @@
 .projects-content-scrollable {
   height: 380px;
   width: 100%;
-
   overflow-y: auto;
   overflow-x: hidden;
-
   display: flex;
   flex-direction: column;
   gap: 15px;
-
   padding-top: 15px;
   padding-bottom: 15px;
-
   mask-image: linear-gradient(
     transparent,
     black 40px,
     black calc(100% - 30px),
     transparent
   );
-
   mask-composite: intersect;
   -webkit-mask-composite: source-in;
-
-  scrollbar-color: #4f4e4e transparent;
+  scrollbar-color: var(--scrollbar) transparent;
   scrollbar-width: thin;
 }
 
 .project-item + .project-item {
-  border-top: 1px solid #ccc;
+  border-top: 1px solid var(--border);
 }
 
 .project-item {
   display: flex;
   flex-direction: row;
-
   padding-top: 15px;
   margin-right: 20px;
+  color: var(--text-primary);
 }
 
 .project-item-left {
@@ -52,6 +46,18 @@
   justify-content: right;
 }
 
+.projects-skill-grid-item {
+  font-size: smaller;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: var(--projects-skill-color);
+  border: 2px solid var(--projects-skill-border);
+  border-radius: 8px;
+  background-color: var(--projects-skill-background);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
 @media (max-width: 800px) {
   .projects-content-scrollable {
     height: 400px;
@@ -60,7 +66,6 @@
   .project-item {
     flex-direction: row;
     gap: 15px;
-
     margin-right: 5px;
   }
 

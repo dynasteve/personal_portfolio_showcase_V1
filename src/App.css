@@ -82,13 +82,13 @@
 }
 
 .page-body-section-dark {
-  background-color: grey;
+  background-color: var(--dark-skill-background);
   color: white;
 }
 
 .page-footer {
   color: white;
-  background-color: rgb(104, 104, 104);
+  background-color: var(--footer-background);
 
   margin: auto;
   padding-top: 50px;

@@ -19,6 +19,8 @@ function App() {
     return localStorage.getItem('theme') || 'light';
   });
 
+  const isDark = theme === 'dark';
+
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme);
     localStorage.setItem('theme', theme);
@@ -42,7 +44,7 @@ function App() {
     {showSideBar ? "✕" : "☰"}
     </button>
 
-    <DarkToggleButton toggleTheme={toggleTheme} />
+    <DarkToggleButton isDark={isDark} toggleTheme={toggleTheme} />
 
     <Hero />
 

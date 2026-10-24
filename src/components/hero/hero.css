@@ -2,15 +2,8 @@
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   height: 600px;
-
-  background: linear-gradient(
-    to left,
-    white,
-    rgb(71, 71, 71) 80%
-  );
-
-  color: white;
-
+  background: var(--hero-background);
+  color: #ffffff;
   max-width: 1920px;
   margin: auto;
 }
@@ -23,7 +16,6 @@
 
 .hero-container-right {
   grid-column: span 2;
-
   background-image:
     linear-gradient(
       to right,
@@ -31,7 +23,6 @@
       rgba(0, 0, 0, 0.5) 100%
     ),
     url('../../assets/images/stephen.png');
-
   width: 100%;
   background-size: 1080px;
   background-position: 40%;
@@ -62,7 +53,6 @@
   .hero-container-left {
     grid-column: 1;
     padding: 60px 25px;
-    /* max-width: 90%; */
   }
 
   .hero-container-left-message {
@@ -74,7 +64,6 @@
     display: none;
     grid-column: 1;
     height: 350px;
-
     background-size: cover;
     background-position: center;
   }

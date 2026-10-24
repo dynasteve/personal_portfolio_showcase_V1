@@ -21,12 +21,12 @@ export default function Projects() {
                 deserunt! Sed nisi repellat delectus.
               </p>
               <div className="skills-grid project-skills">
-                <div className="skill-grid-item">Git</div>
-                <div className="skill-grid-item">GitHub</div>
-                <div className="skill-grid-item">Docker</div>
-                <div className="skill-grid-item">Postman</div>
-                <div className="skill-grid-item">Vercel</div>
-                <div className="skill-grid-item">Linux</div>
+                <div className="projects-skill-grid-item">Git</div>
+                <div className="projects-skill-grid-item">GitHub</div>
+                <div className="projects-skill-grid-item">Docker</div>
+                <div className="projects-skill-grid-item">Postman</div>
+                <div className="projects-skill-grid-item">Vercel</div>
+                <div className="projects-skill-grid-item">Linux</div>
               </div>
             </div>
           </div>
@@ -43,12 +43,12 @@ export default function Projects() {
                 deserunt! Sed nisi repellat delectus.
               </p>
               <div className="skills-grid project-skills">
-                <div className="skill-grid-item">Git</div>
-                <div className="skill-grid-item">GitHub</div>
-                <div className="skill-grid-item">Docker</div>
-                <div className="skill-grid-item">Postman</div>
-                <div className="skill-grid-item">Vercel</div>
-                <div className="skill-grid-item">Linux</div>
+                <div className="projects-skill-grid-item">Git</div>
+                <div className="projects-skill-grid-item">GitHub</div>
+                <div className="projects-skill-grid-item">Docker</div>
+                <div className="projects-skill-grid-item">Postman</div>
+                <div className="projects-skill-grid-item">Vercel</div>
+                <div className="projects-skill-grid-item">Linux</div>
               </div>
             </div>
           </div>
@@ -65,12 +65,12 @@ export default function Projects() {
                 deserunt! Sed nisi repellat delectus.
               </p>
               <div className="skills-grid project-skills">
-                <div className="skill-grid-item">Git</div>
-                <div className="skill-grid-item">GitHub</div>
-                <div className="skill-grid-item">Docker</div>
-                <div className="skill-grid-item">Postman</div>
-                <div className="skill-grid-item">Vercel</div>
-                <div className="skill-grid-item">Linux</div>
+                <div className="projects-skill-grid-item">Git</div>
+                <div className="projects-skill-grid-item">GitHub</div>
+                <div className="projects-skill-grid-item">Docker</div>
+                <div className="projects-skill-grid-item">Postman</div>
+                <div className="projects-skill-grid-item">Vercel</div>
+                <div className="projects-skill-grid-item">Linux</div>
               </div>
             </div>
           </div>
@@ -87,12 +87,12 @@ export default function Projects() {
                 deserunt! Sed nisi repellat delectus.
               </p>
               <div className="skills-grid project-skills">
-                <div className="skill-grid-item">Git</div>
-                <div className="skill-grid-item">GitHub</div>
-                <div className="skill-grid-item">Docker</div>
-                <div className="skill-grid-item">Postman</div>
-                <div className="skill-grid-item">Vercel</div>
-                <div className="skill-grid-item">Linux</div>
+                <div className="projects-skill-grid-item">Git</div>
+                <div className="projects-skill-grid-item">GitHub</div>
+                <div className="projects-skill-grid-item">Docker</div>
+                <div className="projects-skill-grid-item">Postman</div>
+                <div className="projects-skill-grid-item">Vercel</div>
+                <div className="projects-skill-grid-item">Linux</div>
               </div>
             </div>
           </div>
