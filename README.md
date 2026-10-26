@@ -5,3 +5,8 @@ Features:
 - Responsive layout for different screen sizes
 - Light and Dark mode toggling
 - Smooth scrolling and section detection
+
+Stack:
+- HTML5/CSS
+- TypeScript
+- React
