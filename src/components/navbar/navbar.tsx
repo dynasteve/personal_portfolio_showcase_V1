@@ -37,36 +37,6 @@ export default function Navbar ({showSideBar, activeSection, scrollToHero, scrol
                   </div>
               )
             })}
-          {/* <div className="navbar-item">
-            <button className='navbar-button' onClick={scrollToHero}>
-              Home
-            </button>
-          </div>
-          <div className="navbar-item">
-            <button className='navbar-button' onClick={scrollToAbout}>
-              About
-            </button>
-          </div>
-          <div className="navbar-item">
-            <button className='navbar-button' onClick={scrollToSkills}>
-              Skills
-            </button>
-          </div>
-          <div className="navbar-item">
-            <button className='navbar-button' onClick={scrollToProjects}>
-              Projects
-            </button>
-          </div>
-          <div className="navbar-item">
-            <button className='navbar-button' onClick={scrollToEducation}>
-              Education
-            </button>
-          </div>
-          <div className="navbar-item">
-            <button className='navbar-button' onClick={scrollToContact}>
-              Contact
-            </button>
-          </div> */}
         </div>
       </div>
       <div className="break-line"></div>
